@@ -1,6 +1,6 @@
 row,start,end,med
 1,2021-10-31  12:00AM,12:00AM,Dayquil
 2,2021-10-31  1:00PM,1:30PM,Nyquil
-3,2021-10-31  08:00AM,,Dayquil
+3,2021-10-31  08:00AM,10:10AM,Dayquil
 4,2021-10-31  10:30AM,10:00AM,Dayquil
 5,2021-10-31  08:00AM,10:00AM,Nyquil
