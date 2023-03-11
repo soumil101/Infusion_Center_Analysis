@@ -3,20 +3,24 @@ from datetime import datetime, date
 import re
 
 def convertTime(time):
+    if time is None or pd.isnull(time):
+        return None
+
     form = re.match(r'(\d{1,2}):(\d{2})(\s*[AP]M)', time)
     if form:
         try:
-            time = date.strptime(time, '%H:%M%p')
+            time = pd.to_datetime(time, format='%I:%M%p')
         except ValueError:
-            time = date.strptime(time, '%H:%M %p')
+            time = pd.to_datetime(time, format='%I:%M %p')
 
     else:
         try:
-            time = date.strptime(time, '%Y-%m-%d %H:%M%p')
+            time = pd.to_datetime(time, format='%Y-%m-%d %I:%M%p')
         except ValueError:
-            time = date.strptime(time, '%Y-%m-%d %H:%M %p')
+            time = pd.to_datetime(time, format='%Y-%m-%d %I:%M %p')
     
     # Return time as a datetime object
+    time = time.time()
     return time
 
 def timeDifference(time1, time2):
