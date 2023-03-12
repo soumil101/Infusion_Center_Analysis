@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 from datetime import datetime, date
 import re
 
@@ -29,6 +30,8 @@ def convertTime(time):
     return time
 
 def timeDifference(time1, time2):
+    if time1 is None or time2 is None:
+        return None
     # changes datetime.time objects into datetime.datetime objects to allow subtraction
     res = datetime.combine(date.min, time2) - datetime.combine(date.min, time1)
     # returns difference between times in minutes
