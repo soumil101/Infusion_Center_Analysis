@@ -39,10 +39,12 @@ def timeDifference(time1, time2):
     return res
 
 def timeOfDay(dt):
+    # fetches the hour from the datetime object as an integer
     h = dt.hour
-    if h <= 9:
-        return 'Early Morning (6:00AM - 9:00AM)'
-    elif h <= 12: 
-        return 'Morning (9:00AM - 12:00PM)'
+    # returns the time of day of the appointment
+    if h <= 10:
+        return 'Morning (7:00AM - 10:00AM)'
+    elif h <= 14: 
+        return 'Mid-day (10:00AM - 2:00PM)'
     else: 
-        return 'Afternoon (12:00 PM - 4:00PM)'
+        return 'Afternoon (2:00 PM - 6:30PM)'
