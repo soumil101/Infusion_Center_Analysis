@@ -40,11 +40,9 @@ def timeDifference(time1, time2):
 
 def timeOfDay(dt):
     h = dt.hour
-    if h < 10:
-        return 'Morning'
-    elif h >= 10 & h <= 14:
-        return 'Peak'
-    elif h > 14:
-        return 'Afternoon'
-    else:
-        return 'Other'
+    if h <= 9:
+        return 'Early Morning (6:00AM - 9:00AM)'
+    elif h <= 12: 
+        return 'Morning (9:00AM - 12:00PM)'
+    else: 
+        return 'Afternoon (12:00 PM - 4:00PM)'
