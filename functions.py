@@ -37,3 +37,14 @@ def timeDifference(time1, time2):
     # returns difference between times in minutes
     res = int(res.total_seconds() / 60)
     return res
+
+def timeOfDay(dt):
+    h = dt.hour
+    if h < 10:
+        return 'Morning'
+    elif h >= 10 & h <= 14:
+        return 'Peak'
+    elif h > 14:
+        return 'Afternoon'
+    else:
+        return 'Other'
