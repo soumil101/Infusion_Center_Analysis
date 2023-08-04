@@ -1,5 +1,4 @@
-# LeanTaas-Assignment
-Soumil Gad Submission for LeanTaas Infusion Data Analyst Intern  
+# Analyzing Infusion Center Patient Wait Times 
   
 cleanData.ipynb contains the process of cleaning the data, including removing duplicates, removing invalid data, and removing illoigcal data  
   
